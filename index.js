@@ -138,5 +138,9 @@ app.post('/generate-invoice', async (req, res) => {
   doc.end();
 });
 
+app.get("/", (req, res) => {
+  res.send("invoice generated successfully");
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
